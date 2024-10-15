@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora</title>
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<h2>Calculadora</h2>
+		<div id="number">
+			<input id="num-one" name="num-one" type="number"> 
+			<input id="num-two" name="num-two" type="number">
+		</div>
+		<div id="checks">
+			<input id="box1" name="sign-area" type="radio" value="add" checked><b>+</b> 
+			<input id="box2" name="sign-area" type="radio" value="subtract"><b>-</b> 
+			<input id="box3" name="sign-area" type="radio" value="multiply"><b>*</b> 
+			<input id="box4" name="sign-area" type="radio" value="divide"><b>/</b>	
+		</div>		
+		<button type="button" onclick="calcular()">Calcular</button>
+		<h1 id="resultArea"></h1>
+	</div>
+	<p>&copy;lucasherrerods</p>
+	<script src="script.js"></script>
+</body>
+
+</html>
