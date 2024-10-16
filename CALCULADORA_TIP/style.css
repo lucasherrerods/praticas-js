@@ -99,3 +99,13 @@ html {
   .range::-moz-focus-outer {
     border: 0;
   }
+
+  #author {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  #author span {
+    color: #EE4477;
+    font-weight: bold;
+  }
