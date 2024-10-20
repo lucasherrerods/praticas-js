@@ -14,17 +14,20 @@ function init() {
 
 function compareNumbers() {
     const userNumber = Number(document.querySelector('#inputBox').value)
-    userNumbers.push(' ' + userNumber)
-    document.querySelector('#guesses').innerHTML = userNumbers
-
-    let text = document.querySelector('#textOutput')
-    let numberAttempts = document.querySelector('#attempts')
 
     if (userNumber < 1 || userNumber > 100) {
         alert('Número inválido! Tente novamente')
         document.querySelector('#inputBox').value = ''
         return
     }
+
+    userNumbers.push(' ' + userNumber)
+    document.querySelector('#guesses').innerHTML = userNumbers
+
+    let text = document.querySelector('#textOutput')
+    let numberAttempts = document.querySelector('#attempts')
+
+
     if (attempts < maxAttempts) {
         if (userNumber > computerNumber) {
             text.innerHTML = `${userNumber} está acima do número sorteado`
@@ -49,5 +52,4 @@ function compareNumbers() {
         text.innerHTML = `Você perdeu! O número era ${computerNumber}`
         document.querySelector('#inputBox').setAttribute('Readonly', 'Readonly')
     }
-
 }
