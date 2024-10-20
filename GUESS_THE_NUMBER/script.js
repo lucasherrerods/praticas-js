@@ -20,15 +20,20 @@ function compareNumbers() {
     let text = document.querySelector('#textOutput')
     let numberAttempts = document.querySelector('#attempts')
 
+    if (userNumber < 1 || userNumber > 100) {
+        alert('Número inválido! Tente novamente')
+        document.querySelector('#inputBox').value = ''
+        return
+    }
     if (attempts < maxAttempts) {
         if (userNumber > computerNumber) {
-            text.innerHTML = 'O número está acima'
+            text.innerHTML = `${userNumber} está acima do número sorteado`
             attempts++
             numberAttempts.innerHTML = attempts
             document.querySelector('#inputBox').value = ''
         }
         else if (userNumber < computerNumber) {
-            text.innerHTML = 'O número está abaixo'
+            text.innerHTML = `${userNumber} está abaixo do número sorteado`
             attempts++
             numberAttempts.innerHTML = attempts
             document.querySelector('#inputBox').value = ''
@@ -44,4 +49,5 @@ function compareNumbers() {
         text.innerHTML = `Você perdeu! O número era ${computerNumber}`
         document.querySelector('#inputBox').setAttribute('Readonly', 'Readonly')
     }
+
 }
