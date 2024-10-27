@@ -7,8 +7,9 @@ function calcularMedia() {
     let resultado = (primeiraNota + segundaNota) / 2
     if (primeiraNota == 0 || segundaNota == 0) {
         alert('Por favor, preencha os dados')
-        return
-    }
+    }    else if (primeiraNota > 10 || segundaNota > 10) {
+        alert('Número inválido, nota maior que 10')
+    }     
     return resultado
 }
 
