@@ -16,6 +16,13 @@ body {
     justify-content: center;
 }
 
+#title {
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+}
+
 .container {
     display: flex;
     align-items: center;
@@ -48,4 +55,12 @@ body {
 
 .container span.time {
     font-size: 12px;
+}
+
+footer {
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    bottom: 20px;
+    font-weight: bold;
 }
