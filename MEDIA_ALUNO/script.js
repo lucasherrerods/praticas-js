@@ -26,6 +26,12 @@ function exibirResultado() {
 
     let situacao = media >= 6 ? 'Aprovado' : 'Reprovado'
     resultadoDiv.innerHTML = `Aluno: ${nome} - Média: ${media} - Status: ${situacao}`
+
+    if (situacao === 'Aprovado') {
+        resultadoDiv.style.backgroundColor = '#c8e6c9'
+    }   else {
+        resultadoDiv.style.backgroundColor = '#ffcdd2'
+    }
 }
 
 document.querySelector('#btn').addEventListener('click', exibirResultado)
