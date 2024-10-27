@@ -12,7 +12,9 @@ function calcularMedia() {
     return resultado
 }
 
-function exibirResultado() {
+function exibirResultado(event) {
+    event.preventDefault()
+
     let nome = nomeAluno.value
 
     let media = calcularMedia()
