@@ -5,6 +5,10 @@ function calcularMedia() {
     let segundaNota = Number(document.querySelector('#nota2').value)
 
     let resultado = (primeiraNota + segundaNota) / 2
+    if (primeiraNota == 0 || segundaNota == 0) {
+        alert('Por favor, preencha os dados')
+        return
+    }
     return resultado
 }
 
