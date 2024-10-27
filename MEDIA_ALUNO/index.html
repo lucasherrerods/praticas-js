@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Média</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cálculo de Média</h1>
+        <form id="formulario">
+            <div class="box">
+                <label for="aluno">Aluno</label>
+                <input type="text" name="aluno" id="aluno">    
+            </div>
+            <div class="box">
+                <label for="nota1">Nota 1 <span class="req">*</span></label>
+                <input type="number" name="nota1" id="nota1" required>    
+            </div>
+            <div class="box">
+                <label for="nota2">Nota 2 <span class="req">*</span></label>
+                <input type="number" name="nota2" id="nota2" required>    
+            </div>
+            <input id="btn" type="button" value="Calcular">
+        </form>
+        <div id="resultado"></div>
+    </div>
+</body>
+</html>
