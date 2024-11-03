@@ -9,17 +9,18 @@
 <body>
     <img src="assets/images/logo.png" alt="Logo" id="logo">
 
-    <main class="container-input">
-        <span>Tamanho <span id="valor"></span> caracteres</span>
+    <main id="container-input">
+        <span>Tamanho <span id="size"></span> caracteres</span>
         <input type="range" name="slider" id="slider" min="5" max="25" value="15">
-        <button id="button">Gerar senha</button>
+        <button id="button" onclick="generatePassword()">Gerar senha</button>
     </main>
 
-    <div class="container-password" id="hide">
+    <div id="container-password" class="hide" onclick="copyPassword()">
         <span id="title">Senha gerada:</span>
         <span id="password">51566115665</span>
         <span id="copy-area">Clique na senha para copiar. 👆</span>
     </div>
 
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
