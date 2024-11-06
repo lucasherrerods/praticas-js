@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="left-container">
+            <img src="assets/images/mobile-profile.svg" alt="Profile Banner">
+        </div>
+        <div id="right-container">
+            <div id="image-form">
+                <img src="assets/images/male.svg" alt="Avatar masculino">
+            </div>
+            <form id="form">
+                <div class="form-content">
+                    <label for="username">Nome de usuário</label>
+                    <div class="input-content">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="username" id="username" placeholder="Insira um nome de usuário">
+                    </div>
+                </div>
+                <div class="form-content">
+                    <label for="email">E-mail</label>
+                    <div class="input-content">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" id="email" placeholder="Insira seu e-mail">
+                    </div>
+                </div>
+                <div class="form-content">
+                    <label for="password">Senha</label>
+                    <div class="input-content">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" name="password" id="password" placeholder="Digite uma senha">
+                    </div>
+                </div>
+                <div class="form-content">
+                    <label for="password">Confirmação de senha</label>
+                    <div class="input-content">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password-confirm" id="password-confirm" placeholder="Digite a senha novamente">
+                    </div>
+                </div>
+                <input type="submit" value="Cadastrar" id="btn">
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
