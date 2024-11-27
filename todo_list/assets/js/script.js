@@ -5,7 +5,7 @@ const completeList = document.querySelector('.list-task')
 let listTask = []
 
 function addNewTask() {
-    listTask.push({
+    listTask.push({ //criando um objeto e adicionando na minha array
         task: inputTask.value,
         completed: false
     })
@@ -21,7 +21,7 @@ function showTasks() {
 
     let newLi = ''
 
-    listTask.forEach((item, index) => {
+    listTask.forEach((item, index) => { //capturando parametros referentes a posicao de cada item e montando uma tag li
 
         newLi = newLi + `
         <li class="task ${item.completed && "done"}">
@@ -33,6 +33,8 @@ function showTasks() {
     })
 
     completeList.innerHTML = newLi
+
+    localStorage.setItem('lista', JSON.stringify(listTask)) //adicionando a lista de tarefas no local storage
 }
 
 function removeTask(index) {
@@ -42,7 +44,18 @@ function removeTask(index) {
 }
 
 function completeTask(index) {
-    listTask[index].completed = !listTask[index].completed
+    listTask[index].completed = !listTask[index].completed //alternando o valor do item "completed" do objeto
 
     showTasks()
 }
+
+function reloadTasks() {
+    const localStorageTasks = localStorage.getItem('lista')
+
+    if (localStorageTasks) {
+        listTask = JSON.parse(localStorageTasks) //transformando a lista de volta para um objeto
+    }
+
+    showTasks()
+}
+reloadTasks()
