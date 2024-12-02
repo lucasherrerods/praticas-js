@@ -52,7 +52,7 @@ function completeTask(index) {
 function reloadTasks() {
     const localStorageTasks = localStorage.getItem('lista')
 
-    if (localStorageTasks) {
+    if (localStorageTasks) { //verifica se há dados no local storage ao dar reload na página
         listTask = JSON.parse(localStorageTasks) //transformando a lista de volta para um objeto
     }
 
