@@ -18,7 +18,74 @@ body {
 }
 
 .container {
-    width: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome {
+    position: absolute;
+    top: 50;
+    left: 0;
+    translate: -50%, -50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 800px;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+#welcome:hover {
+    transform: scale(1.02);
+}
+
+#welcome h1 {
+    color: #574CFF;
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+#welcome p {
+    color: #666;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+#welcome #start-btn {
+    background-color: #574CFF;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#welcome #start-btn:hover {
+    background-color: #4331cc;
+    transform: translateY(-3px);
+}
+
+#welcome #start-btn:active {
+    transform: translateY(0);
+}
+
+#container-content {
+    width: 800px;
+    height: auto;
     background-color: #fff;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
     padding: 3rem;
@@ -43,6 +110,7 @@ body {
 #add-contact button {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 30px;
     gap: 8px;
     padding: 5px 25px 5px 20px;
@@ -151,7 +219,8 @@ body {
     opacity: 0;
 }
 
-.fa-solid, img {
+.fa-solid,
+img {
     width: 20px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -166,14 +235,15 @@ body {
     font-size: 14px;
 }
 
-.fa-solid:hover, 
+.fa-solid:hover,
 img:hover {
     opacity: 0.7;
     transform: scale(1.1);
 }
 
 /* ESTILOS MODAL */
-#fade {
+#create-fade,
+#edit-fade {
     position: fixed;
     top: 0;
     left: 0;
@@ -183,7 +253,8 @@ img:hover {
     z-index: 5;
 }
 
-#modal-contact {
+#create-contact,
+#edit-contact {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -237,26 +308,35 @@ img:hover {
     transform: scale(1.1);
 }
 
-.modal-actions #save {
+.modal-actions #save-create,
+.modal-actions #save-edit {
     background-color: #0f910f;
     color: #fff;
 }
 
 /* TRANSICAO MODAL */
-
-#fade,
-#modal-contact {
+#welcome,
+#container-content,
+#create-fade,
+#edit-fade,
+#create-contact,
+#edit-contact {
     opacity: 1;
     transition: 0.5s;
     pointer-events: all;
 }
 
-#fade.hide,
-#modal-contact.hide {
+#welcome.hide,
+#container-content.hide,
+#create-fade.hide,
+#edit-fade.hide,
+#create-contact.hide,
+#edit-contact.hide {
     opacity: 0;
     pointer-events: none;
 }
 
-#modal-contact.hide {
+#create-contact.hide,
+#edit-contact.hide {
     top: 0;
 }
